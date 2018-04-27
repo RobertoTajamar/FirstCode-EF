@@ -1,0 +1,42 @@
+﻿@model FirscodeProject.Models.Juego
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Juego</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdJuego)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdJuego)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreJuego)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreJuego)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

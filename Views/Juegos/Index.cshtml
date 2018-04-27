@@ -1,0 +1,45 @@
+﻿@model IEnumerable<FirscodeProject.Models.Juego>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdJuego)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreJuego)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdJuego)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreJuego)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdJuego }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.IdJuego }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.IdJuego })
+        </td>
+    </tr>
+}
+
+</table>
